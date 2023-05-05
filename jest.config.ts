@@ -103,7 +103,7 @@ export default {
   preset: 'ts-jest',
 
   // Run tests from one or more projects
-  // projects: undefined,
+  projects: ['./packages/**/jest.config.js'],
 
   // Use this configuration option to add custom reporters to Jest
   // reporters: undefined,
@@ -144,7 +144,7 @@ export default {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  // testEnvironment: "jest-environment-node",
+  testEnvironment: 'node',
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -153,10 +153,7 @@ export default {
   // testLocationInResults: false,
 
   // The glob patterns Jest uses to detect test files
-  testMatch: [
-    '**/__tests__/**/*.[jt]s?(x)',
-    '**/?(*.)+(spec|test).[tj]s?(x)'
-  ],
+  testMatch: ['*.test.ts', '*.test.tsx'],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   // testPathIgnorePatterns: [
@@ -192,4 +189,4 @@ export default {
 
   // Whether to use watchman for file crawling
   // watchman: true,
-};
+}

@@ -1,0 +1,5 @@
+{
+  "extends": [
+    "@waiterapp-2.0/eslint-config"
+  ]
+}
